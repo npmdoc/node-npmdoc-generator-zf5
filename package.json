@@ -1,0 +1,17 @@
+{
+    "buildNpmdoc":"generator-zf5",
+    "devDependencies": {
+        "generator-zf5": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "name":"npmdoc-generator-zf5",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-generator-zf5"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh"
+    },
+    "version": "0.0.1"
+}
