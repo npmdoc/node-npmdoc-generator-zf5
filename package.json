@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"generator-zf5",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "generator-zf5",
+    "description": "api documentation for [generator-zf5 (v1.0.0)](https://github.com/juliancwirko/generator-zf5) [![npm package](https://img.shields.io/npm/v/npmdoc-generator-zf5.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-zf5) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-zf5.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-zf5)",
     "devDependencies": {
-        "generator-zf5": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "generator-zf5": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-generator-zf5",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-generator-zf5",
+    "keywords": [
+        "documentation",
+        "generator-zf5"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_generator_zf5.js",
+    "name": "npmdoc-generator-zf5",
+    "nameAlias": "npmdoc_generator_zf5",
+    "nameOriginal": "npmdoc-generator-zf5",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-generator-zf5"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
